@@ -8,8 +8,17 @@ RapidPHP: http://www.rapidphpeditor.com/
 
 Original CSSComb: https://github.com/csscomb/csscomb.js
 
+Changes from original
+=====================
+
+Folder [blumentals](blumentals/) contains files that are required for browserify bundling and running in browser.
+
+Folder [blumentals/custom_plugins](blumentals/custom_plugins/) contains plugins (options) that are modified/bugfixed from original CSSComb plugins. Plugin remove-comments.js is completely new.
+
 How to modify & compile
 =======================
+
+Requires node.js to be installed: https://nodejs.org/
 
 1) Install csscomb.js: npm install csscomb
    The required node_modules will be created with this command.
