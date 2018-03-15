@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Sample Project</title>
+        <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+        <script src="bundle.js"></script>
+        <script>
+        var settings = {
+            "remove-empty-rulesets": true,
+            "block-indent": "",
+            "color-shorthand": true,
+            "remove-comments": true,
+            "eof-newline": false,
+            "leading-zero": false,
+            "lines-between-rulesets": 0,
+            "space-before-colon": "",
+            "space-after-colon": "",
+            "space-before-combinator": "",
+            "space-after-combinator": "",
+            "space-between-declarations": "",
+            "space-before-opening-brace": "",
+            "space-after-opening-brace": "",
+            "space-after-selector-delimiter": "",
+            "space-before-selector-delimiter": "",
+            "space-before-closing-brace": "",
+            "strip-spaces": true,
+            "tab-size": true,
+            "unitless-zero": true
+        };
+        
+        try {
+        CSSCOMB('test.css', '/*** layout ***/\n\nbody {\n    padding: 0px; /*yo*/\n\n    margin: 0px;\n/* just test */}\n\n/*** layout ***/\n\ndiv {\n    padding: 0px;\n    margin: 0px;\n}\n\n\n.design-boxed #wrap {\n    margin: 0 auto;\n    max-width: 920px;\n}   \n@media screen and (min-width: 480px) {\n    body {\n        background-color: lightgreen;\n    } span {space: nowrap}\n}', settings, function(res) {
+    
+          console.log('RES:' + res);
+          
+        }, function(error) {
+            if (error.name == 'Parsing error') {
+                console.log('errorcallback');
+                console.log(error.line);
+                console.log(error);
+            }
+            else {
+                console.log(error);
+            }
+        });
+        } catch(e) {
+            console.log('errorcatch');
+            console.log(e.line);
+            console.log(e);
+        }
+        </script>
+    </head>
+    <body>
+        <h1>My Sample Project</h1>
+    </body>
+    
+    <script>
+     
+    </script>
+</html>
