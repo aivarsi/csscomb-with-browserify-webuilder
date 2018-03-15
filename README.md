@@ -20,8 +20,8 @@ How to modify & compile
 
 Requires node.js to be installed: https://nodejs.org/
 
-1) Install csscomb.js: npm install csscomb
-   The required node_modules will be created with this command.
+1) Install csscomb.js: npm install csscomb <br>
+   The required node_modules will be created with this command. <br>
    This command must be run from the folder where compile.bat is located.
 
 2) Update blumentals\plugins.js if necessary (e.g. if you have added new plugins)
